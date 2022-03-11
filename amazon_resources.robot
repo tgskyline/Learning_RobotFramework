@@ -1,2 +1,5 @@
+*** Settings ***
+Library  SeleniumLibrary
+
 *** Keywords ***
 
