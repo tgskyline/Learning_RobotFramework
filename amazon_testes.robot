@@ -7,7 +7,6 @@ Test Teardown    Fechar o navegador
 # Suite Setup
 # Suite Teardown
 
-
 *** Test Cases ***
 Caso de Teste 01 - Acesso ao menu "Eletrônicos"
     [Documentation]  Esse teste verfica o menu eletrônico do site da Amazon.com.br
