@@ -15,3 +15,5 @@ Fechar o navegador
 Acessar a home page do site Amazon.com.br
     Go to    url=${URL} 
     Wait Until Element Is Visible    locator=${MENU_ELETRONICOS}
+Entrar no menu "Eletrônicos"
+
