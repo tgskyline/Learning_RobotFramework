@@ -24,3 +24,5 @@ Verificar se aparece a frase "Eletrônicos e Tecnologia"
     Wait Until Page Contains    text=${TEXT_HEADER_ELETRONICO}
     Wait Until Element Is Visible    locator=${HEADER_ELETRONICOS}
 
+Verificar se o título da página fica "${TITULO}"
+    Title Should Be    title=${TITULO}
