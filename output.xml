@@ -1,174 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220313 12:07:43.822" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220313 17:49:51.689" rpa="false" schemaversion="2">
 <suite id="s1" name="Amazon Testes" source="C:\Users\Tiago Gomes\OneDrive\Documentos\Automação de Testes\RobotFramework\WebTesting\amazon_testes.robot">
-<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;">
+<test id="s1-t1" name="Caso de Teste 03 - Pesquisa de um Produto (Resolvido pela professora)">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220313 12:07:44.001" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220313 12:07:44.000" endtime="20220313 12:07:45.115"/>
+<msg timestamp="20220313 17:49:51.851" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220313 17:49:51.851" endtime="20220313 17:49:53.046"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220313 12:07:45.115" endtime="20220313 12:07:45.231"/>
+<status status="PASS" starttime="20220313 17:49:53.046" endtime="20220313 17:49:53.157"/>
 </kw>
-<status status="PASS" starttime="20220313 12:07:44.000" endtime="20220313 12:07:45.231"/>
+<status status="PASS" starttime="20220313 17:49:51.851" endtime="20220313 17:49:53.157"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220313 12:07:45.234" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20220313 12:07:45.233" endtime="20220313 12:07:46.895"/>
+<msg timestamp="20220313 17:49:53.160" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20220313 17:49:53.159" endtime="20220313 17:49:54.937"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_ELETRONICOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220313 12:07:46.895" endtime="20220313 12:07:46.915"/>
+<status status="PASS" starttime="20220313 17:49:54.937" endtime="20220313 17:49:54.957"/>
 </kw>
-<status status="PASS" starttime="20220313 12:07:45.233" endtime="20220313 12:07:46.915"/>
-</kw>
-<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${TITULO}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220313 12:07:46.919" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
-<status status="PASS" starttime="20220313 12:07:46.916" endtime="20220313 12:07:46.919"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:46.915" endtime="20220313 12:07:46.919"/>
-</kw>
-<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${MENU_ELETRONICOS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220313 12:07:46.920" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
-<status status="PASS" starttime="20220313 12:07:46.920" endtime="20220313 12:07:49.392"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:46.920" endtime="20220313 12:07:49.392"/>
-</kw>
-<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>text=${TEXT_HEADER_ELETRONICO}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220313 12:07:49.393" endtime="20220313 12:07:49.464"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${HEADER_ELETRONICOS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220313 12:07:49.464" endtime="20220313 12:07:49.540"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:49.393" endtime="20220313 12:07:49.540"/>
-</kw>
-<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${TITULO}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220313 12:07:49.547" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
-<status status="PASS" starttime="20220313 12:07:49.542" endtime="20220313 12:07:49.547"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:49.542" endtime="20220313 12:07:49.547"/>
-</kw>
-<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//span[@dir='auto'][contains(.,'${NOME_CATEGORIA}')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220313 12:07:49.617" level="INFO">Element '//span[@dir='auto'][contains(.,'Computadores e Informática')]' is displayed.</msg>
-<status status="PASS" starttime="20220313 12:07:49.548" endtime="20220313 12:07:49.618"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:49.548" endtime="20220313 12:07:49.618"/>
-</kw>
-<kw name="Verificar se aparece a categoria &quot;Celulares e Comunicação&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//span[@dir='auto'][contains(.,'${NOME_CATEGORIA}')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220313 12:07:49.683" level="INFO">Element '//span[@dir='auto'][contains(.,'Celulares e Comunicação')]' is displayed.</msg>
-<status status="PASS" starttime="20220313 12:07:49.619" endtime="20220313 12:07:49.683"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:49.619" endtime="20220313 12:07:49.683"/>
-</kw>
-<doc>Esse teste verfica o menu eletrônico do site da Amazon.com.br
-e verifica a categoria Computadores e informática</doc>
-<tag>catergorias</tag>
-<tag>menus</tag>
-<status status="PASS" starttime="20220313 12:07:43.999" endtime="20220313 12:07:49.684"/>
-</test>
-<test id="s1-t2" name="Caso de Teste 02 - Pesquisa de um Produto">
-<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220313 12:07:49.687" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220313 12:07:49.687" endtime="20220313 12:07:50.932"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220313 12:07:50.933" endtime="20220313 12:07:51.045"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:49.686" endtime="20220313 12:07:51.045"/>
-</kw>
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220313 12:07:51.047" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20220313 12:07:51.047" endtime="20220313 12:07:52.777"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${MENU_ELETRONICOS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220313 12:07:52.778" endtime="20220313 12:07:52.812"/>
-</kw>
-<status status="PASS" starttime="20220313 12:07:51.046" endtime="20220313 12:07:52.812"/>
+<status status="PASS" starttime="20220313 17:49:53.159" endtime="20220313 17:49:54.957"/>
 </kw>
 <kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${PESQUISA_PRODUTO}&quot; no campo de pesquisa">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${CAMPO_BUSCA}</arg>
 <arg>text=${PESQUISA_PRODUTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220313 12:07:52.814" level="INFO">Typing text 'Xbox Series S' into text field '//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20220313 12:07:52.813" endtime="20220313 12:07:52.978"/>
+<msg timestamp="20220313 17:49:54.959" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220313 17:49:54.958" endtime="20220313 17:49:55.096"/>
 </kw>
-<status status="PASS" starttime="20220313 12:07:52.813" endtime="20220313 12:07:52.978"/>
+<status status="PASS" starttime="20220313 17:49:54.958" endtime="20220313 17:49:55.096"/>
 </kw>
 <kw name="Clicar no botão de pesquisa" library="amazon_resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BTN_PESQUISA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220313 12:07:52.980" level="INFO">Clicking element '//input[contains(@type,'submit')]'.</msg>
-<status status="PASS" starttime="20220313 12:07:52.979" endtime="20220313 12:07:54.945"/>
+<msg timestamp="20220313 17:49:55.098" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220313 17:49:55.097" endtime="20220313 17:49:56.730"/>
 </kw>
-<status status="PASS" starttime="20220313 12:07:52.979" endtime="20220313 12:07:54.945"/>
+<status status="PASS" starttime="20220313 17:49:55.097" endtime="20220313 17:49:56.730"/>
 </kw>
-<kw name="Verificar o resultado da pesquisa se esta listando o produto pesquisado" library="amazon_resources">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Xbox Series S')])[2]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220313 12:07:54.971" level="INFO">Element '(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Xbox Series S')])[2]' is displayed.</msg>
-<status status="PASS" starttime="20220313 12:07:54.947" endtime="20220313 12:07:54.971"/>
+<kw name="Verificar o resultado da pesquisa se esta listando o produto &quot;Console Xbox Series S&quot;" library="amazon_resources" sourcename="Verificar o resultado da pesquisa se esta listando o produto &quot;${PRODUTO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=(//span[contains(.,'${PRODUTO}')])[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220313 17:49:56.731" endtime="20220313 17:49:56.751"/>
 </kw>
-<status status="PASS" starttime="20220313 12:07:54.946" endtime="20220313 12:07:54.972"/>
+<status status="PASS" starttime="20220313 17:49:56.731" endtime="20220313 17:49:56.752"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220313 17:49:57.031" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220313 17:49:56.752" endtime="20220313 17:49:57.031"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220313 17:49:57.031" endtime="20220313 17:49:59.114"/>
+</kw>
+<status status="PASS" starttime="20220313 17:49:56.752" endtime="20220313 17:49:59.114"/>
 </kw>
 <doc>Esse teste verifica a busca de um produto</doc>
 <tag>busca_produtos</tag>
 <tag>lista_busca</tag>
-<status status="PASS" starttime="20220313 12:07:49.685" endtime="20220313 12:07:54.972"/>
+<status status="PASS" starttime="20220313 17:49:51.850" endtime="20220313 17:49:59.115"/>
 </test>
 <doc>Essa suíte testa o site da Amazon.com.br</doc>
-<status status="PASS" starttime="20220313 12:07:43.823" endtime="20220313 12:07:54.975"/>
+<status status="PASS" starttime="20220313 17:49:51.690" endtime="20220313 17:49:59.117"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">busca_produtos</stat>
-<stat pass="1" fail="0" skip="0">catergorias</stat>
 <stat pass="1" fail="0" skip="0">lista_busca</stat>
-<stat pass="1" fail="0" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>
