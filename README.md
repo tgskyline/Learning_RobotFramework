@@ -1,7 +1,7 @@
-## Learning_RobotFramework
+# Learning_RobotFramework
 Aprendizado sobre RobotFramework
 
-ANOTAÇÕES
+## ANOTAÇÕES
 
  - Para instalar uma versão especifica do Robot Framework
 
@@ -39,7 +39,7 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
 > pip freeze
 
-será listado todas as bibliotecas do pyhton, selecione somente as com robot framework e utilize o comando abaixo para cada uma delas
+-- será listado todas as bibliotecas do pyhton, selecione somente as com robot framework e utilize o comando abaixo para cada uma delas
 
 > pip install -U [Descrição da Biblioteca]
 
@@ -51,4 +51,20 @@ será listado todas as bibliotecas do pyhton, selecione somente as com robot fra
 
 - Formas de rodar o teste por linha de comando
 
->
+> robot --help (Exbide Help do RobotFramework)
+
+> robot -i [digite uma tag] [nome do arquivo] (Roda somente os testes com as determinadas tags)
+
+> robot -e [digite uma tag] [nome do arquivo] (NÃO irá rodar somente os testes com as determinadas tags)
+
+> robot -d [nome de uma pasta] [nome do arquivo]
+
+## Rodar por linha de comando, mas determinando qual browser usar
+
+> robot -v [variável global:navegador]
+
+Ex: robot -v BROWSER:firefox
+
+- Também é possível combinar parametros para se rodar o teste via linha de comando
+
+Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
