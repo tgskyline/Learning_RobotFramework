@@ -1,7 +1,7 @@
-## Learning_RobotFramework
+# Learning_RobotFramework
 Aprendizado sobre RobotFramework
 
-#ANOTAÇÕES
+## ANOTAÇÕES
 
  - Para instalar uma versão especifica do Robot Framework
 
@@ -59,7 +59,7 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
 > robot -d [nome de uma pasta] [nome do arquivo]
 
-# Rodar por linha de comando, mas determinando qual browser usar
+## Rodar por linha de comando, mas determinando qual browser usar
 
 > robot -v [variável global:navegador]
 
