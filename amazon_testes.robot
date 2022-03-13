@@ -36,5 +36,5 @@ Caso de Teste 03 - Pesquisa de um Produto (Resolvido pela professora)
     Acessar a home page do site Amazon.com.br
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
-    # Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
-    Verificar o resultado da pesquisa se esta listando o produto "Erro Proposital"
+    Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
+    # Verificar o resultado da pesquisa se esta listando o produto "Erro Proposital"
