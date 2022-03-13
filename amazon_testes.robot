@@ -9,6 +9,9 @@ Test Teardown    Fechar o navegador
 # Suite Teardown
 
 *** Test Cases ***
+
+# MODELO PROCEDURAL
+
 Caso de Teste 01 - Acesso ao menu "Eletrônicos"
     [Documentation]  Esse teste verfica o menu eletrônico do site da Amazon.com.br
     ...              e verifica a categoria Computadores e informática
