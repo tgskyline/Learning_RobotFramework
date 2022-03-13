@@ -6,14 +6,15 @@ ${URL}    https://www.amazon.com.br/
 ${MENU_ELETRONICOS}    //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
 ${HEADER_ELETRONICOS}    //span[@class='a-size-base a-color-base apb-browse-refinements-indent-1 a-text-bold'][contains(.,'Eletrônicos e Tecnologia')]
 ${TEXT_HEADER_ELETRONICO}    Eletrônicos e Tecnologia
-${CAMPO_BUSCA}    //input[contains(@type,'text')]
-${BTN_PESQUISA}    //input[contains(@type,'submit')]
+${CAMPO_BUSCA}    twotabsearchtextbox
+${BTN_PESQUISA}    nav-search-submit-button
 
 *** Keywords ***
 Abrir o navegador
     Open Browser     browser=chrome
     Maximize Browser Window
 Fechar o navegador
+    Capture Page Screenshot
     Close Browser
 
 Acessar a home page do site Amazon.com.br
@@ -40,3 +41,6 @@ Clicar no botão de pesquisa
 
 Verificar o resultado da pesquisa se esta listando o produto pesquisado
     Element Should Be Visible    locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Xbox Series S')])[2]
+
+Verificar o resultado da pesquisa se esta listando o produto "${PRODUTO}"
+    Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
