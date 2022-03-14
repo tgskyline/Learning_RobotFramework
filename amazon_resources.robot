@@ -9,6 +9,12 @@ ${HEADER_ELETRONICOS}    //span[@class='a-size-base a-color-base apb-browse-refi
 ${TEXT_HEADER_ELETRONICO}    Eletrônicos e Tecnologia
 ${CAMPO_BUSCA}    twotabsearchtextbox
 ${BTN_PESQUISA}    nav-search-submit-button
+${BTN_ADC_CARRINHO}    add-to-cart-button
+${MODAL_ADC_PEDIDO}    //h1[contains(@id,'attach-warranty-header')]
+${CLIQUE_FORA}    //div[contains(@class,'a-declarative attach-dss-backdrop')]
+${MSG_ADC_CARRINHO}    //span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold'][contains(.,'Adicionado ao carrinho')]
+${BTN_IR_CARRINHO}    //a[contains(.,'Ir para o carrinho')]
+${MSG_CAR_VAZIO}    //h1[@class='a-spacing-mini a-spacing-top-base'][contains(.,'Seu carrinho de compras da Amazon está vazio.')]
 
 *** Keywords ***
 
@@ -50,6 +56,25 @@ Verificar o resultado da pesquisa se esta listando o produto pesquisado
 Verificar o resultado da pesquisa se esta listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
 
+# CASO DE TESTE 4
+Adicionar o produto "${PRODUTO}" no carrinho
+    Click Element    locator=(//span[contains(.,'${PRODUTO}')])[2]
+    Click Element    locator=${BTN_ADC_CARRINHO}
+
+# CASO DE TESTE 5
+
+Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+    Wait Until Element Is Visible    locator=${MODAL_ADC_PEDIDO}
+    Click Element    locator=${CLIQUE_FORA}
+    Wait Until Element Is Visible    locator=${MSG_ADC_CARRINHO}
+    Click Element    locator=${BTN_IR_CARRINHO}
+Remover o produto "${PRODUTO}" do carrinho
+    Click Element    locator=//input[contains(@aria-label,'Excluir ${PRODUTO}')]
+
+Verificar se o carrinho fica vazio
+    Wait Until Element Contains    locator=${MSG_CAR_VAZIO}    text=Seu carrinho de compras da Amazon está vazio.
+
+
 # GHERKIN STEPS
 
 # CASO DE TESTE 1
@@ -82,3 +107,28 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
+
+
+# CASO DE TESTE 3
+
+Dado que estou na home page da Amazon.com.br, pequiso "Xbox Series S"
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Clicar no botão de pesquisa
+Quando adicionar o produto "Console Xbox Series S" no carrinho
+    Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
+
+ Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
+     Adicionar o produto "Console Xbox Series S" no carrinho
+
+# CASO DE TESTE 4
+
+E existe o produto "Console Xbox Series S" no carrinho
+    Adicionar o produto "Console Xbox Series S" no carrinho
+    Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+
+Quando remover o produto "Console Xbox Series S" do carrinho
+    Remover o produto "Console Xbox Series S" do carrinho
+
+Então o carrinho deve ficar vazio
+    Verificar se o carrinho fica vazio
