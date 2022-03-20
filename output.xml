@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220320 18:46:14.102" rpa="false" schemaversion="2">
-<suite id="s1" name="Tarefa6" source="c:\Users\Tiago Gomes\OneDrive\Documentos\Automação de Testes\RobotFramework\WebTesting\Resolução de Tarefas\tarefa6.robot">
-<test id="s1-t1" name="Eu sou o número">
-<status status="FAIL" starttime="20220320 18:46:14.290" endtime="20220320 18:46:14.291">Test case contains no keywords.</status>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220320 20:09:39.059" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Tiago Gomes\.vscode\extensions\robocorp.robotframework-lsp-0.42.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<status status="PASS" starttime="20220320 20:09:39.079" endtime="20220320 20:09:42.489"/>
+</kw>
+<status status="PASS" starttime="20220320 20:09:39.078" endtime="20220320 20:09:42.489"/>
 </test>
-<doc>Resolução da Tarefa 06</doc>
-<status status="FAIL" starttime="20220320 18:46:14.106" endtime="20220320 18:46:14.293"/>
+<status status="PASS" starttime="20220320 20:09:39.060" endtime="20220320 20:09:42.490"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tarefa6">Tarefa6</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
 </suite>
 </statistics>
 <errors>
