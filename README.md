@@ -69,7 +69,7 @@ Ex: robot -v BROWSER:firefox
 
 Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
-# Tipos de variáveis
+## Tipos de variáveis
 
 - Simples
 > ${GLOBAL_SIMPLES} [String]
