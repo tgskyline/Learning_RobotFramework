@@ -1,0 +1,14 @@
+****** Automação de Testes com Robot Framework ******
+***************** Básico APIs *****************
+
+Anexo: Para quem não sabe o que é uma API, comece por aqui!
+
+01 - O que é uma API:
+https://www.youtube.com/watch?v=tDNQBEc-au0
+http://www.up.edu.br/blogs/engenharia-da-computacao/2016/07/01/o-que-e-uma-api/
+
+02 – REST:
+https://becode.com.br/o-que-e-api-rest-e-restful/
+
+03 - Testando uma API:
+https://medium.com/@thi_carva/testando-servi%C3%A7os-web-api-com-postman-874ac81b20a3 *****************
