@@ -66,3 +66,17 @@ Ex: robot -v BROWSER:firefox
 
 Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
+# Tipos de variáveis
+
+- Simples
+> ${GLOBAL_SIMPLES} [String]
+
+-Tipo Lista
+> @{FRUTAS}	morango  banana  maça   uva  abacaxi
+
+- Tipo Dicionário
+> &{PESSOA}  nome=May Fernandes email=mayfernandes@exemplo.com.br  idade=28  sexo=feminino
+
+## Dicas
+
+- Usar o ${\n} em um [Log to Console] faz com que ele quebre a linha a cada registro de log.
