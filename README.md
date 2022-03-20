@@ -68,3 +68,14 @@ Ex: robot -v BROWSER:firefox
 - Também é possível combinar parametros para se rodar o teste via linha de comando
 
 Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
+
+# Tipos de variáveis
+
+- Simples
+> ${GLOBAL_SIMPLES} [String]
+
+-Tipo Lista
+> @{FRUTAS}	morango  banana  maça   uva  abacaxi
+
+- Tipo Dicionário
+> &{PESSOA}  nome=May Fernandes email=mayfernandes@exemplo.com.br  idade=28  sexo=feminino
