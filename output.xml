@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220320 15:14:43.602" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Tiago Gomes\.vscode\extensions\robocorp.robotframework-lsp-0.42.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Uma keyword qualquer 01">
+<msg timestamp="20220320 15:14:44.958" level="FAIL">No keyword with name 'Uma keyword qualquer 01' found.</msg>
+<status status="FAIL" starttime="20220320 15:14:44.958" endtime="20220320 15:14:44.958"/>
+</kw>
+<kw name="Conbinação aletória">
+<status status="NOT RUN" starttime="20220320 15:14:44.961" endtime="20220320 15:14:44.961"/>
+</kw>
+<kw name="Gerandor de e-mail automatico">
+<status status="NOT RUN" starttime="20220320 15:14:44.965" endtime="20220320 15:14:44.965"/>
+</kw>
+<status status="PASS" starttime="20220320 15:14:43.644" endtime="20220320 15:14:46.087"/>
+</kw>
+<status status="PASS" starttime="20220320 15:14:43.643" endtime="20220320 15:14:46.087"/>
+</test>
+<status status="PASS" starttime="20220320 15:14:43.606" endtime="20220320 15:14:46.089"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
