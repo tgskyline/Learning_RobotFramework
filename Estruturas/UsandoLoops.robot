@@ -18,19 +18,20 @@ Caso de teste exemplo 01
 
 *** Keywords ***
 Usando FOR com RANGE
-    :FOR    ${COUNT}    IN RANGE    1    6
-    \    Log    Meu contador atual é: ${COUNT}. O range será de 1 a 5!
-    \    Run Keyword If    ${COUNT} == 5    Log    Acabou o loop!!!
+    FOR    ${COUNT}    IN RANGE    1    6
+        Log    Meu contador atual é: ${COUNT}. O range será de 1 a 5!
+        Run Keyword If    ${COUNT} == 5    Log    Acabou o loop!!!
+    END
 
 Usando FOR com LISTA
-    :FOR    ${ITEM}    IN    @{FRUTAS}
-    \    Log    Minha fruta é: ${ITEM}
-    \    Run Keyword If    '${ITEM}' == 'abacaxi'    Log    Acabou o loop!!!
-
+    FOR    ${ITEM}    IN    @{FRUTAS}
+        Log    Minha fruta é: ${ITEM}
+        Run Keyword If    '${ITEM}' == 'abacaxi'    Log    Acabou o loop!!!
+    END
 Saindo de um FOR
-    :FOR    ${ITEM}    IN    @{FRUTAS}
-    \    Exit For Loop If    '${ITEM}' == 'uva'
-    \    Log    Minha fruta é: ${ITEM}
-
+    FOR    ${ITEM}    IN    @{FRUTAS}
+        Exit For Loop If    '${ITEM}' == 'uva'
+        Log    Minha fruta é: ${ITEM}
+    END
 Usando a keyword REPEAT
     Repeat Keyword    4    Log    Vamos logar essa frase 4 vezes!!!
