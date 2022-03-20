@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 22:25:52.854" rpa="false" schemaversion="2">
-<suite id="s1" name="Tarefa4" source="C:\Users\Tiago Gomes\OneDrive\Documentos\Automação de Testes\RobotFramework\WebTesting\tarefa4.robot">
-<test id="s1-t1" name="Caso de teste de exemplo 01">
-<kw name="Uma keyword qualquer 01">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220320 15:59:40.757" rpa="false" schemaversion="2">
+<suite id="s1" name="Tarefa5" source="C:\Users\Tiago Gomes\OneDrive\Documentos\Automação de Testes\RobotFramework\WebTesting\tarefa5.robot">
+<test id="s1-t1" name="Tarefa 05">
+<kw name="Email customizado">
+<kw name="Nome e Sobrenome para Email">
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.sobrenome}</arg>
+<kw name="Generate Random String" library="String">
+<var>${ALEATORIO}</var>
+<arg>8</arg>
+<arg>[LETTERS]1234</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220320 15:59:40.815" level="INFO">${ALEATORIO} = b12TnnAr</msg>
+<status status="PASS" starttime="20220320 15:59:40.815" endtime="20220320 15:59:40.815"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${EMAIL}</var>
+<arg>${NOME_USUARIO}${SOBRENOME_USUARIO}${ALEATORIO}${PESSOA.dominio}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220320 15:59:40.816" level="INFO">${EMAIL} = TiagoGomesb12TnnAr@testerobot.com</msg>
+<status status="PASS" starttime="20220320 15:59:40.815" endtime="20220320 15:59:40.816"/>
+</kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>Meses do ano e suas quantidade de dias:${MES_DIAS}</arg>
+<arg>${EMAIL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220315 22:25:52.876" endtime="20220315 22:25:52.876"/>
+<status status="PASS" starttime="20220320 15:59:40.816" endtime="20220320 15:59:40.818"/>
 </kw>
-<status status="PASS" starttime="20220315 22:25:52.876" endtime="20220315 22:25:52.876"/>
+<status status="PASS" starttime="20220320 15:59:40.810" endtime="20220320 15:59:40.819"/>
 </kw>
-<status status="PASS" starttime="20220315 22:25:52.875" endtime="20220315 22:25:52.877"/>
+<status status="PASS" starttime="20220320 15:59:40.810" endtime="20220320 15:59:40.820"/>
+</kw>
+<status status="PASS" starttime="20220320 15:59:40.808" endtime="20220320 15:59:40.820"/>
 </test>
-<doc>Tarefa para se crair um dicionário que informe no log a quantidade de dias</doc>
-<status status="PASS" starttime="20220315 22:25:52.855" endtime="20220315 22:25:52.878"/>
+<doc>Resolução da tarefa 5</doc>
+<status status="PASS" starttime="20220320 15:59:40.760" endtime="20220320 15:59:40.823"/>
 </suite>
 <statistics>
 <total>
@@ -22,7 +42,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tarefa4">Tarefa4</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tarefa5">Tarefa5</stat>
 </suite>
 </statistics>
 <errors>
