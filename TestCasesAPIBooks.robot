@@ -19,3 +19,11 @@ Buscar um livro especifico (GET em um livro especifico)
     
 Cadastrar um novo livro (POST)
     Cadastrar um novo livro
+    Conferir status code   200
+    Conferir o reason    OK
+
+Alterar um livro (PUT)
+    Conferir de retorna todos os dados alterados do livro    150
+
+Deletar um livro (DELETE)
+    Conferir se deleta o livro "200" (o response body deve ser vazio)
