@@ -17,3 +17,5 @@ Buscar um livro especifico (GET em um livro especifico)
     Conferir o reason    OK
     Conferir se retorna todos os dados corretos do livro 15
     
+Cadastrar um novo livro (POST)
+    Cadastrar um novo livro
