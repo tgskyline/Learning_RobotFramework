@@ -1,3 +1,4 @@
+
 *** Settings ***
 Documentation    Documentação da API: https://fakerestapi.azurewebsites.net/index.html
 Library          RequestsLibrary
@@ -7,6 +8,7 @@ Library          Collections
 
 ${URL_API}    https://fakerestapi.azurewebsites.net/api/v1/
 
+&{BOOK_15}    ID=15    Title=Book 15    PageCount=1500
 
 *** Keywords ***
 
@@ -34,6 +36,16 @@ Conferir o reason
 Conferir se retorna uma lista com ${QTD_LIVROS} livros
     Length Should Be    ${RESPOSTA.json()}    ${QTD_LIVROS} 
 
-Requisitar o libro "15"   
+Conferir se retorna todos os dados corretos do livro 15
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    ID           ${BOOK_15.ID}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    Title        ${BOOK_15.Title}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    PageCount    ${BOOK_15.PageCount}
+    Should Not Be Empty    ${RESPOSTA.json()["Description"]}    
+    Should Not Be Empty    ${RESPOSTA.json()["Excerpt"]}
+    Should Not Be Empty    ${RESPOSTA.json()["PublishDate"]}    
+
+
+
+
 
 

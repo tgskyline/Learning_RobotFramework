@@ -13,4 +13,7 @@ Buscar a listagem de todos os livros (GET em todos os livros)
 
 Buscar um livro especifico (GET em um livro especifico)
     Requisitar o livro "15"
+    Conferir status code    200
+    Conferir o reason    OK
+    Conferir se retorna todos os dados corretos do livro 15
     
