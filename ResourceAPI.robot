@@ -8,7 +8,9 @@ Library          Collections
 
 ${URL_API}    https://fakerestapi.azurewebsites.net/api/v1/
 
-&{BOOK_15}    ID=15    Title=Book 15    PageCount=1500
+&{BOOK_15}    id=15    title=Book 15    pageCount=1500
+
+
 
 *** Keywords ***
 
@@ -37,13 +39,18 @@ Conferir se retorna uma lista com ${QTD_LIVROS} livros
     Length Should Be    ${RESPOSTA.json()}    ${QTD_LIVROS} 
 
 Conferir se retorna todos os dados corretos do livro 15
-    Dictionary Should Contain Item    ${RESPOSTA.json()}    ID           ${BOOK_15.ID}
-    Dictionary Should Contain Item    ${RESPOSTA.json()}    Title        ${BOOK_15.Title}
-    Dictionary Should Contain Item    ${RESPOSTA.json()}    PageCount    ${BOOK_15.PageCount}
-    Should Not Be Empty    ${RESPOSTA.json()["Description"]}    
-    Should Not Be Empty    ${RESPOSTA.json()["Excerpt"]}
-    Should Not Be Empty    ${RESPOSTA.json()["PublishDate"]}    
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    id           ${BOOK_15.id}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    title        ${BOOK_15.title}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    pageCount    ${BOOK_15.pageCount}
+    Should Not Be Empty    ${RESPOSTA.json()["description"]}    
+    Should Not Be Empty    ${RESPOSTA.json()["excerpt"]}
+    Should Not Be Empty    ${RESPOSTA.json()["publishDate"]}    
 
+Cadastrar um novo livro
+    ${HEADERS}    Create Dictionary    content-type=application/json
+    ${RESPOSTA}    POST On Session     FakeAPI    Books
+    ...                                data={"id":0,"title":"teste","description":"teste","pageCount":200,"excerpt":"teste","publishDate":"2022-03-21T01:24:10.903Z"}
+    ...                                headers=${HEADERS}        
 
 
 
