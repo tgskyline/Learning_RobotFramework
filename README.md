@@ -15,8 +15,7 @@ Aprendizado sobre RobotFramework
 
  -  Para verificar os pacotes/bibliotecas do Python instalado e atualização
 
--- Acessar o portal pypi.org, link abaixo.
-> https://pypi.org/
+-- Acessar o portal pypi.org > https://pypi.org/
 
 > pip freeze
  
@@ -30,11 +29,11 @@ Aprendizado sobre RobotFramework
  Requests
 > pip install -U robotframework-requests
 
-- Extensão do VsCode
+## Extensão do VsCode
 
-Robot Framework Language Server da Robocorp
+<h3> Robot Framework Language Server da Robocorp </h3>
 
-- Instalação de Drivers
+## Instalação de Drivers
 
 Driver do Firefox, digitar geckdriver no google, navegar até Assets e baixar a versão mais recente para o SO
 
@@ -50,7 +49,7 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
 > pip freeze
 
--- será listado todas as bibliotecas do pyhton, selecione somente as com robot framework e utilize o comando abaixo para cada uma delas
+- Será listado todas as bibliotecas do pyhton, selecione somente as com robot framework e utilize o comando abaixo para cada uma delas
 
 > pip install -U [Descrição da Biblioteca]
 
@@ -62,7 +61,9 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
 ## Se mantenha atualizado com as novas releases
 
--- Acesse o repositório do RobotFramework no GitHub pelo link abaixo e localize a pasta com a última release, estude e aplique as novidades
+O significado da sigla [rc] é Release Candidate, é uma verão que ainda esta sendo desenvolvida
+
+- Acesse o repositório do RobotFramework no GitHub pelo link abaixo e localize a pasta com a última release, estude e aplique as novidades
 
 > https://github.com/robotframework/robotframework/tree/master/doc/releasenotes
 
@@ -98,3 +99,33 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 - Tipo Dicionário
 > &{PESSOA}  nome=May Fernandes email=mayfernandes@exemplo.com.br  idade=28  sexo=feminino
+
+# Boas Práticas
+
+## Uso de Documentation
+
+Usado para abaixo do título do cenário de teste para descrever pontos relevantes do teste, exemplo abaixo;
+
+*** Test Cases ***
+
+Cenário exemplo
+    [Documentation]     Exemplo de documentação
+    Acessar o menu
+    Logar com usuário válido
+    Clicar em "ok"
+
+## Uso de Tags
+
+Usado para classificar os testes para que posteriormente seja possível executar somente testes com a mesma classificação ou Tag, veja exemplo abaixo;
+
+*** Test Cases ***
+
+Cenário exemplo
+    [Documentation]     Exemplo de documentação
+    [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
+    Acessar o menu
+    Logar com usuário válido
+    Clicar em "ok"
+
+
+
