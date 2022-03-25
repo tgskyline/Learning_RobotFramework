@@ -7,11 +7,22 @@ Aprendizado sobre RobotFramework
 
 > pip install --upgrade robotframework==3.2.2
 
- -  Para verificar os pacotes/bibliotecas do Python instalado
- 
+ - Para instalar a versão mais recente do Robot Framewoork
+
+> pip install robotframework
+
+> pip install -U robotframework
+
+ -  Para verificar os pacotes/bibliotecas do Python instalado e atualização
+
+-- Acessar o portal pypi.org, link abaixo.
+> https://pypi.org/
+
 > pip freeze
  
- - Libraries Externas mais utilizadas
+ - Libraries Externas mais utilizadas, para atualizar todas sempre utilize o comando 
+
+> pip install -U
  
  Selenium
 > pip install -U robotframework-seleniumlibrary
@@ -48,6 +59,14 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 - Rodando somente um Caso de Teste da Suíte
 
 > robot -t ["nome do teste em aspas duplas"] [nome do arquivo]
+
+## Se mantenha atualizado com as novas releases
+
+-- Acesse o repositório do RobotFramework no GitHub pelo link abaixo e localize a pasta com a última release, estude e aplique as novidades
+
+> https://github.com/robotframework/robotframework/tree/master/doc/releasenotes
+
+## Rodar o Robot por linha de comando
 
 - Formas de rodar o teste por linha de comando
 
