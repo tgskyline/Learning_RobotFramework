@@ -49,7 +49,7 @@ Posteriormente deve ser descompactar e alocar os arquivos .exe na pasta aonde fo
 
 C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
-- Atualizando bibliotecas
+## Atualizando bibliotecas
 
 > pip freeze
 
@@ -75,7 +75,7 @@ O significado da sigla [rc] é Release Candidate, é uma verão que ainda esta s
 
 - Formas de rodar o teste por linha de comando
 
-> robot --help (Exbide Help do RobotFramework)
+> robot --help (Exibe o Help do RobotFramework)
 
 > robot -i [digite uma tag] [nome do arquivo] (Roda somente os testes com as determinadas tags)
 
