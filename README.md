@@ -33,6 +33,10 @@ Aprendizado sobre RobotFramework
 
 > Robot Framework Language Server da Robocorp
 
+## Extensão do Google Chrome - TruePath da QaWorld
+
+> https://chrome.google.com/webstore/detail/truepath/mgjhkhhbkkldiihlajcnlfchfcmhipmn?hl=pt-BR
+
 ## Instalação de Drivers
 
 Driver do Firefox, digitar geckdriver no google, navegar até Assets e baixar a versão mais recente para o SO
