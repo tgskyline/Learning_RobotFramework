@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 4.1.3 (Python 3.10.2 on win32)" name="Generator">
+<meta content="Robot Framework 5.0 (Python 3.10.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -764,6 +764,7 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
@@ -1148,8 +1149,8 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'VAR', 'IF', 'ELSE IF', 'ELSE'];
-    var MESSAGE_TYPE = 8;
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1170,10 +1171,10 @@ window.testdata = function () {
                 elapsed];
     }
     function createMessage(element, strings) {
-        return model.Message(LEVELS[element[2]],
-                             util.timestamp(element[1]),
-                             strings.get(element[3]),
-                             strings.get(element[4]));
+        return model.Message(LEVELS[element[1]],
+                             util.timestamp(element[0]),
+                             strings.get(element[2]),
+                             strings.get(element[3]));
     }
     function parseStatus(stats) {
         return STATUSES[stats[0]];
@@ -1184,7 +1185,7 @@ window.testdata = function () {
         };
     }
     function createBodyItem(parent, element, strings, index) {
-        if (element[0] == MESSAGE_TYPE)
+        if (element.length < 5)
             return createMessage(element, strings);
         var messages = util.filter(parent.children(), function (child) {
             return child.type == 'message';
@@ -1628,22 +1629,22 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[1,0,4150],[],[[5,0,0,[],[1,118,3027],[]],[6,0,0,[],[1,3145,312],[]],[7,0,0,[],[1,3459,232],[]],[8,0,0,[],[1,3693,222],[]],[9,0,0,[],[1,3918,228],[]]],[],[5,5,0,0]];
+window.output["suite"] = [1,2,3,4,[],[1,0,49752],[],[[5,0,6,[7,8],[1,257,8565],[]],[9,0,10,[11,12],[1,8825,7288],[]],[13,0,10,[11,12],[1,16116,7190],[]],[14,0,15,[16],[1,23307,10897],[]],[17,0,18,[19],[1,34207,15542],[]]],[],[5,5,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*TestCasesAPIBooks","*C:\\Users\\Tiago Gomes\\OneDrive\\Documentos\\Automação de Testes\\RobotFramework\\WebTesting\\TestCasesAPIBooks.robot","*../TestCasesAPIBooks.robot","*<p>Documentação da API: <a href=\"https://fakerestapi.azurewebsites.net/index.html\">https://fakerestapi.azurewebsites.net/index.html\x3c/a>\x3c/p>","*Buscar a listagem de todos os livros (GET em todos os livros)","*Buscar um livro especifico (GET em um livro especifico)","*Cadastrar um novo livro (POST)","*Alterar um livro (PUT)","*Deletar um livro (DELETE)"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Amazon Testes","*C:\\Users\\tiago.santos\\OneDrive\\Documentos\\Automação de Testes\\RobotFramework\\WebTesting\\amazon_testes.robot","*../amazon_testes.robot","*<p>Essa suíte testa o site da Amazon.com.br\x3c/p>","*Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;","*<p>Esse teste verfica o menu eletrônico do site da Amazon.com.br e verifica a categoria Computadores e informática\x3c/p>","*catergorias","*menus","*Caso de Teste 02 - Pesquisa de um Produto (Feito por mim)","*<p>Esse teste verifica a busca de um produto\x3c/p>","*busca_produtos","*lista_busca","*Caso de Teste 03 - Pesquisa de um Produto (Resolvido pela professora)","*Caso de Teste 04 - Adicionar Produto no Carrinho","*<p>Esse teste verifica a adição de um produto no carrinho de compras\x3c/p>","*adicionar_carrinho","*Caso de Teste 05 - Remover Produto do Carrinho","*<p>Esse teste verifica a remoção de um produto no carrinho de compras\x3c/p>","*remover_carrinho"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:04","fail":0,"label":"All Tests","pass":5,"skip":0}],[],[{"elapsed":"00:00:04","fail":0,"id":"s1","label":"TestCasesAPIBooks","name":"TestCasesAPIBooks","pass":5,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:49","fail":0,"label":"All Tests","pass":5,"skip":0}],[{"elapsed":"00:00:11","fail":0,"label":"adicionar_carrinho","pass":1,"skip":0},{"elapsed":"00:00:14","fail":0,"label":"busca_produtos","pass":2,"skip":0},{"elapsed":"00:00:09","fail":0,"label":"catergorias","pass":1,"skip":0},{"elapsed":"00:00:14","fail":0,"label":"lista_busca","pass":2,"skip":0},{"elapsed":"00:00:09","fail":0,"label":"menus","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"remover_carrinho","pass":1,"skip":0}],[{"elapsed":"00:00:50","fail":0,"id":"s1","label":"Amazon Testes","name":"Amazon Testes","pass":5,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1647830826161;
+window.output["baseMillis"] = 1648209493892;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 4259;
+window.output["generated"] = 49773;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
