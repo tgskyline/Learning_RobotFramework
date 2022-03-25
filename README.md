@@ -31,7 +31,7 @@ Aprendizado sobre RobotFramework
 
 ## Extensão do VsCode
 
-<h3> Robot Framework Language Server da Robocorp </h3>
+> Robot Framework Language Server da Robocorp
 
 ## Instalação de Drivers
 
@@ -106,26 +106,14 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 Usado para abaixo do título do cenário de teste para descrever pontos relevantes do teste, exemplo abaixo;
 
-*** Test Cases ***
-
-Cenário exemplo
-    [Documentation]     Exemplo de documentação
-    Acessar o menu
-    Logar com usuário válido
-    Clicar em "ok"
+> [Documentation]     Exemplo de documentação
+ 
 
 ## Uso de Tags
 
 Usado para classificar os testes para que posteriormente seja possível executar somente testes com a mesma classificação ou Tag, veja exemplo abaixo;
 
-*** Test Cases ***
-
-Cenário exemplo
-    [Documentation]     Exemplo de documentação
-    [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
-    Acessar o menu
-    Logar com usuário válido
-    Clicar em "ok"
+> [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
 
 
 
