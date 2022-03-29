@@ -13,7 +13,7 @@ Aprendizado sobre RobotFramework
 
 > pip install -U robotframework
 
-## Verificar bibliotecas do Python que estão instaladas para atualização
+## Verificar bibliotecas do Python que estão instaladas ou atualização
 
 -- Acessar o portal pypi.org > https://pypi.org/
 
