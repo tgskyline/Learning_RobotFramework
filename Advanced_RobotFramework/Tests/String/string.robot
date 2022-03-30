@@ -18,7 +18,7 @@ Exemplo 02: Manipulando a String
 *** Keywords ***
 Pega arquivo
     ## Lembrando: O GET FILE retorna o conteúdo do arquivo em STRING!
-    ${CONTEUDO_ARQUIVO}    Get File    ./my_files/arquivo_texto_linhas.txt
+    ${CONTEUDO_ARQUIVO}    Get File    ./Advanced_RobotFramework/Tests/String/my_files/arquivo_texto_linhas.txt
     [Return]        ${CONTEUDO_ARQUIVO}
 
 Contando as linhas
@@ -53,7 +53,7 @@ Substituindo valores no texto
     ${TEXTO}        Pega arquivo
     ${NOVO_TEXTO}   Replace String    string=${TEXTO}    search_for=Minha linha    replace_with=Conteúdo da minha linha
     Log             O velho texto era assim:\n${TEXTO}\nO novo texto ficou assim:\n${NOVO_TEXTO}
-    Create File     ./my_files/meu_novo_arquivo.txt      ${NOVO_TEXTO}
+    Create File     ./Advanced_RobotFramework/Tests/String/my_files/meu_novo_arquivo.txt      ${NOVO_TEXTO}
 
 Quero tudo minúsculo!
     ${TEXTO}        Pega arquivo
