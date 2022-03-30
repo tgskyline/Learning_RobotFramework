@@ -1,0 +1,7 @@
+{
+    “nome”: “Tiago”,
+    “sobrenome”: “Gomes dos Santos”,
+    “data_nasc”: 23 / 03 / 1988,
+    “genero”: “Masculino”,
+    “tipo_jogo”: [“aventura”, “ação”, “ficção”]
+},
