@@ -1,0 +1,22 @@
+Baixando um cliente de Banco de Dados
+
+Nesta aula vamos usar o PostgreSQL, mas se você já tiver algum outro servidor/cliente de Banco de Dados instalado que queira usar, fique a vontade!!! A única coisa que vai mudar é a forma de conexão com esse banco, mas isso será explicado na aula sobre DatabaseLibrary, pois a DatabaseLibrary deve se conectar com a maioria dos Banco de Dados existentes!!!
+
+Se você deseja utilizar o da aula, segue o passo-a-passo:
+
+01 - Baixe e instale o Banco de Dados (PostgreSQL) conforme o seu S.O.
+	- https://www.postgresql.org/download/
+	- Para Windows, pode ser a versão postgresql-12.0-1-windows-x64.exe (anexo nesta aula)
+
+02 - Acesse o PGAdmin para gerenciar o Banco de Dados
+	- (Windows) Menu Iniciar -> pgAdmin4
+	
+OBS.: Para ver os aplicativos e configurações instaladas (Windows)
+	- C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PostgreSQL 12
+	- C:\Program Files\PostgreSQL\12\data
+
+03 - Para o Python (que roda abaixo do Robot) conseguir se comunicar com o PostgreSQL, vamos utilizar o driver psycopg2, para isso precisamos instalá-lo também:
+	- Documentação: https://pypi.org/project/psycopg2/
+	- pip install psycopg2
+	
+04 - Pronto! Agora é só aguardar a aula sobre a library DatabaseLibrary para ver como o Robot irá interagir com o Banco de Dados!	
