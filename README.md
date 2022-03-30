@@ -40,6 +40,8 @@
 
 > Robot Framework Language Server da Robocorp
 
+<br>
+
 ## Extensão do Google Chrome - TruePath da QaWorld
 
 > https://chrome.google.com/webstore/detail/truepath/mgjhkhhbkkldiihlajcnlfchfcmhipmn?hl=pt-BR
