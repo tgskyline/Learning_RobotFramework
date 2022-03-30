@@ -1,5 +1,8 @@
 # Learning_RobotFramework
-Aprendizado sobre RobotFramework
+
+## Aprendizado sobre RobotFramework
+
+<br>
 
 ## ANOTAÇÕES
 
@@ -12,6 +15,8 @@ Aprendizado sobre RobotFramework
 > pip install robotframework
 
 > pip install -U robotframework
+
+<br>
 
 ## Verificar bibliotecas do Python que estão instaladas ou atualizar
 
@@ -29,6 +34,8 @@ Aprendizado sobre RobotFramework
  Requests
 > pip install -U robotframework-requests
 
+<br>
+
 ## Extensão do VsCode
 
 > Robot Framework Language Server da Robocorp
@@ -36,6 +43,8 @@ Aprendizado sobre RobotFramework
 ## Extensão do Google Chrome - TruePath da QaWorld
 
 > https://chrome.google.com/webstore/detail/truepath/mgjhkhhbkkldiihlajcnlfchfcmhipmn?hl=pt-BR
+
+<br>
 
 ## Instalação de Drivers
 
@@ -48,6 +57,8 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 Posteriormente deve ser descompactar e alocar os arquivos .exe na pasta aonde foi instalado o Pyhton
 
 C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
+
+<br>
 
 ## Atualizando bibliotecas
 
@@ -63,6 +74,8 @@ C:\Users\Tiago Gomes\AppData\Local\Programs\Python\Python310\Scripts
 
 > robot -t ["nome do teste em aspas duplas"] [nome do arquivo]
 
+<br>
+
 ## Se mantenha atualizado com as novas releases
 
 O significado da sigla [rc] é Release Candidate, é uma verão que ainda esta sendo desenvolvida
@@ -70,6 +83,8 @@ O significado da sigla [rc] é Release Candidate, é uma verão que ainda esta s
 - Acesse o repositório do RobotFramework no GitHub pelo link abaixo e localize a pasta com a última release, estude e aplique as novidades
 
 > https://github.com/robotframework/robotframework/tree/master/doc/releasenotes
+
+<br>
 
 ## Rodar o Robot por linha de comando
 
@@ -83,6 +98,8 @@ O significado da sigla [rc] é Release Candidate, é uma verão que ainda esta s
 
 > robot -d [nome de uma pasta] [nome do arquivo]
 
+<br>
+
 ## Rodar por linha de comando, mas determinando qual browser usar
 
 > robot -v [variável global:navegador]
@@ -92,6 +109,8 @@ Ex: robot -v BROWSER:firefox
 - Também é possível combinar parametros para se rodar o teste via linha de comando
 
 Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
+
+<br>
 
 ## Tipos de variáveis
 
@@ -104,7 +123,11 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 - Tipo Dicionário
 > &{PESSOA}  nome=May Fernandes email=mayfernandes@exemplo.com.br  idade=28  sexo=feminino
 
+<br>
+
 # Boas Práticas
+
+<br>
 
 ## Uso de Documentation
 
@@ -112,6 +135,7 @@ Usado para abaixo do título do cenário de teste para descrever pontos relevant
 
 > [Documentation]     Exemplo de documentação
  
+<br>
 
 ## Uso de Tags
 
@@ -119,5 +143,30 @@ Usado para classificar os testes para que posteriormente seja possível executar
 
 > [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
 
+<br>
+
+## Comunicação com SGBD
+
+Para realizar testes comunicando com SGBD de sua escolha será necessário ter a Librarie [ databaselibray ] no caminho   [...\python\python310\lib\site-packages] utilize o comando pip abaixo para isso.
+
+> pip install -U robotframework-databaselibrary
+
+<br>
+
+### **Driver para comunicação do Python com SGBD**
+
+<br>
+
+De acordo com o banco de dados que irá utilizar é necessário instalar o Driver respectivo para para o SGBD, abaixo alguns exemplo de instalação de Drivers e seus respectivos SGBD.
+
+Para **SQLite**: não precisa instalar nada!
+
+> pip install psycopg2 - para **PostgreSQL** 
+
+> pip install pymysql - para **MySQL**
+
+> pip install pymssql - para **SQL Server**
+
+> pip install cx-Oracle - para **Oracle**
 
 
