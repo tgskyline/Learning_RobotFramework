@@ -158,7 +158,7 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 Usado para abaixo do título do cenário de teste para descrever pontos relevantes do teste, exemplo abaixo;
 
- [Documentation]     Exemplo de documentação
+ > [Documentation]     Exemplo de documentação
  
 <br>
 
@@ -166,7 +166,7 @@ Usado para abaixo do título do cenário de teste para descrever pontos relevant
 
 Usado para classificar os testes para que posteriormente seja possível executar somente testes com a mesma classificação ou Tag, veja exemplo abaixo;
 
- [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
+>  [Tags]              exemplo_tags    exemplo_mais_de_um_tipo_tags
 
 <br>
 
