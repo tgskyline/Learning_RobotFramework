@@ -129,7 +129,6 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 # Boas Práticas
 
-<br>
 
 ## Uso de Documentation
 
