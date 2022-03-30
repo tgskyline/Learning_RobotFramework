@@ -129,7 +129,6 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 # Boas Práticas
 
-<br>
 
 ## Uso de Documentation
 
@@ -171,4 +170,35 @@ Para **SQLite**: não precisa instalar nada!
 
 > pip install cx-Oracle - para **Oracle**
 
+### **Keyword de conexão com o SGBD**
 
+<br>
+
+**PostgreSQL**
+<br>
+
+    Connect To Database   dbapiModuleName=psycopg2   dbName=robot   dbUsername=postgres   dbPassword=postgres   dbHost=localhost   dbPort=5432
+<br>
+
+**SQLite 3**
+<br>
+
+    Connect To Database Using Custom Params   dbapiModuleName=sqlite3    db_connect_string=database="./${DBName}.db", isolation_level=None
+<br>
+
+**MySQL**
+<br>
+
+    Connect To Database   dbapiModuleName=pymysql   dbName=${DBName}   dbUsername=${DBUser}   dbPassword=${DBPass}   dbHost=${DBHost}   dbP{DBPort}
+<br>
+
+**SQL Server**
+<br>
+
+    Connect To Database   dbapiModuleName=pymssql   dbName=${DBName}   dbUsername=${DBUser}   dbPassword=${DBPass}   dbHost=${DBHost}   dbPort=${DBPort}	  
+<br>
+
+**Oracle**
+<br>
+
+      # Connect To Database Using Custom Params    dbapiModuleName=cx_Oracle    db_connect_string="${DBName}/${DBUser}@${DBHost}:${DBPort}/${DBalias}"
