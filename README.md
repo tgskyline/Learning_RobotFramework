@@ -139,6 +139,39 @@ Ex: robot -v BROWSER:firefox -i menus -d resultados -v URL:http://www.google.com
 
 <br>
 
+## Executar Testes Headless
+
+Para executar o teste em Headless é usado a [-v BROWSER:headless] exemplo abaixo.
+
+
+    robot -d ./Resultado -v BROWSER:headlesschrome exemplo_de_arq_teste.robot
+
+Abaixo é possível ver a lista da Keyword {Open Browser} de como deve ser descrito cada navegador seja no modo Headless ou normal.
+
+
+        |    = Browser =    |        = Name(s) =       |
+        | Firefox           | firefox, ff              |
+        | Google Chrome     | googlechrome, chrome, gc |
+        | Headless Firefox  | headlessfirefox          |
+        | Headless Chrome   | headlesschrome           |
+        | Internet Explorer | internetexplorer, ie     |
+        | Edge              | edge                     |
+        | Safari            | safari                   |
+        | Opera             | opera                    |
+        | Android           | android                  |
+        | Iphone            | iphone                   |
+        | PhantomJS         | phantomjs                |
+        | HTMLUnit          | htmlunit                 |
+        | HTMLUnit with Javascript | htmlunitwithjs    |
+
+## Executar Testes por linha de comando que tenham  Keywords Próprias
+
+Para executar Keywords próprias é necessário rodar o teste de uma forma uma diferente do abtual.
+
+<br>
+
+    python -m robot 
+
 ## Tipos de variáveis
 
 - Simples
@@ -234,39 +267,6 @@ Para **Oracle**
 <br>
 
       # Connect To Database Using Custom Params    dbapiModuleName=cx_Oracle    db_connect_string="${DBName}/${DBUser}@${DBHost}:${DBPort}/${DBalias}"
-
-## Executar Keywords Próprias
-
-Para executar Keywords próprias é necessário rodar o teste de uma forma uma diferente do abtual.
-
-<br>
-
-    python -m robot 
-
-## Executar Testes Headless
-
-Para executar o teste em Headless é usado a [-v BROWSER:headless] exemplo abaixo.
-
-
-    robot -d ./Resultado -v BROWSER:headlesschrome exemplo_de_arq_teste.robot
-
-Abaixo é possível ver a lista da Keyword {Open Browser} de como deve ser descrito cada navegador seja no modo Headless ou normal.
-
-
-        |    = Browser =    |        = Name(s) =       |
-        | Firefox           | firefox, ff              |
-        | Google Chrome     | googlechrome, chrome, gc |
-        | Headless Firefox  | headlessfirefox          |
-        | Headless Chrome   | headlesschrome           |
-        | Internet Explorer | internetexplorer, ie     |
-        | Edge              | edge                     |
-        | Safari            | safari                   |
-        | Opera             | opera                    |
-        | Android           | android                  |
-        | Iphone            | iphone                   |
-        | PhantomJS         | phantomjs                |
-        | HTMLUnit          | htmlunit                 |
-        | HTMLUnit with Javascript | htmlunitwithjs    |
 
 
 
