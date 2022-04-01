@@ -234,3 +234,11 @@ Para **Oracle**
 <br>
 
       # Connect To Database Using Custom Params    dbapiModuleName=cx_Oracle    db_connect_string="${DBName}/${DBUser}@${DBHost}:${DBPort}/${DBalias}"
+
+## Executar Keywords próprias
+
+Para executar Keywords próprias é necessário rodar o teste de uma forma uma diferente do abtual.
+
+<br>
+
+    python -m robot 
