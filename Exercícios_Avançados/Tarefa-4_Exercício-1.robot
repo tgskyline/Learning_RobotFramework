@@ -21,10 +21,15 @@ Conectar com autenticação por token na API do GitHub
     ${HEADERS}          Create Dictionary    Authorization=Bearer ${MY_GITHUB_TOKEN}
     Create Session      alias=mygithubAuth   url=${GITHUB_HOST}     headers=${HEADERS}     disable_warnings=True
 
+Confere sucesso na requisição
+    [Arguments]      ${RESPONSE}
+    Should Be True   '${RESPONSE.status_code}'=='200' or '${RESPONSE.status_code}'=='201'
+    ...  msg=Erro na requisição! Verifique: ${RESPONSE}
+
 POST na Issue "12" comentando "Comentário cadastrado via Robot Framework!"
-    ${BODY}         Format String    ${CURDIR}/data/input/post_comment.json
+    ${BODY}         Format String    C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Advanced_RobotFramework/API/data/input/post_comment.json
     ...             user_git=${MY_GITHUB_USER}
     Log             Meu Body ficou:\n${BODY}
     ${RESPONSE}     Post Request    alias=mygithubAuth    uri=${ISSUES_URI}   data=${BODY}
-    # Confere sucesso na requisição   ${RESPONSE}
+    Confere sucesso na requisição   ${RESPONSE}
 
