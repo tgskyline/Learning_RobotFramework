@@ -13,7 +13,7 @@ Criando lista e dicionário via parâmetro
     Teste Criando uma Lista         may   ribeiro   fernandes
     Teste Criando os dois           may   ribeiro   fernandes    shell=True    env=False
 
-*** Keywords ***
+*** Keywords ***  
 Teste de Argumentos Básico
     [Arguments]     ${arg1}  ${arg2}  ${arg3}  ${arg4}
     Log    ${arg1} - ${arg2} - ${arg3} - ${arg4}
