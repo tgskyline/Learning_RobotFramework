@@ -22,6 +22,7 @@ ${MSG_CAR_VAZIO}    //h1[@class='a-spacing-mini a-spacing-top-base'][contains(.,
 Abrir o navegador
     Open Browser     browser=${BROWSER}
     Maximize Browser Window
+
 Fechar o navegador
     Capture Page Screenshot
     Close Browser
@@ -29,6 +30,7 @@ Fechar o navegador
 Acessar a home page do site Amazon.com.br
     Go to    url=${URL} 
     Wait Until Element Is Visible    locator=${MENU_ELETRONICOS}
+
 Entrar no menu "Eletrônicos"
     Click Element    locator=${MENU_ELETRONICOS}
 
@@ -68,6 +70,7 @@ Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
     Click Element    locator=${CLIQUE_FORA}
     Wait Until Element Is Visible    locator=${MSG_ADC_CARRINHO}
     Click Element    locator=${BTN_IR_CARRINHO}
+
 Remover o produto "${PRODUTO}" do carrinho
     Click Element    locator=//input[contains(@aria-label,'Excluir ${PRODUTO}')]
 
@@ -102,6 +105,7 @@ E a categoria "Celulares e Comunicação" deve ser exibida na página
 Quando pesquisar pelo produto "Xbox Series S"
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
+
 Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
     Verificar se o título da página fica "Amazon.com.br : Xbox Series S"
 
@@ -115,6 +119,7 @@ Dado que estou na home page da Amazon.com.br, pequiso "Xbox Series S"
     Acessar a home page do site Amazon.com.br
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
+    
 Quando adicionar o produto "Console Xbox Series S" no carrinho
     Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
 
