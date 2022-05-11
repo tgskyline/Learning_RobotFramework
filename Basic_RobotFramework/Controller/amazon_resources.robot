@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Library/chromedriversync.py
 
 *** Variables ***
 ${BROWSER}    chrome
@@ -19,8 +20,14 @@ ${MSG_CAR_VAZIO}    //h1[@class='a-spacing-mini a-spacing-top-base'][contains(.,
 *** Keywords ***
 
 # CASO DE TESTE 1
+
+Atualiza o ChromeDrive
+    ${chromedriver_path}=    Get Chromedriver Path
+    Set Global Variable    ${chromedriver_path}
+
 Abrir o navegador
-    Open Browser     browser=${BROWSER}
+    Atualiza o ChromeDrive
+    Open Browser     browser=${BROWSER}    executable_path=${chromedriver_path}
     Maximize Browser Window
 
 Fechar o navegador
