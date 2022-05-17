@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Library/chromedriversync.py
+Library  C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Library/screenshot.py
+
 
 *** Variables ***
 ${BROWSER}    chrome
@@ -31,7 +33,7 @@ Abrir o navegador
     Maximize Browser Window
 
 Fechar o navegador
-    Capture Page Screenshot
+    Pyscreenshot
     Close Browser
 
 Acessar a home page do site Amazon.com.br
