@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Library  C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Library/chromedriversync.py
-Library  C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Library/screenshot.py
+Library  ./Library/chromedriversync.py
+Library  ./Library/screenshot.py
 
 
 *** Variables ***
@@ -35,6 +35,7 @@ Abrir o navegador
 Fechar o navegador
     Pyscreenshot
     Close Browser
+    Capture Page Screenshot
 
 Acessar a home page do site Amazon.com.br
     Go to    url=${URL} 
@@ -62,7 +63,7 @@ Clicar no botão de pesquisa
     Click Element    ${BTN_PESQUISA}
 
 Verificar o resultado da pesquisa se esta listando o produto pesquisado
-    Element Should Be Visible    locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Xbox Series S')])[2]
+    Wait Until Element Is Visible    locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Xbox Series S')])[2]
 
 Verificar o resultado da pesquisa se esta listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
