@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Essa suíte testa o site da Amazon.com.br
-Resource         C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Basic_RobotFramework/Controller/amazon_resources.robot
+Resource         C:/Users/Tiago Gomes/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Basic_RobotFramework/Controller/amazon_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
