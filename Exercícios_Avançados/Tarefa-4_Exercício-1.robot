@@ -4,7 +4,7 @@ Documentation       Exemplos da própria Library: https://github.com/bulkan/robo
 Library             RequestsLibrary
 Library             Collections
 Library             String
-Resource            C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Advanced_RobotFramework/API/variables/my_user_and_passwords.robot
+Resource            ../Advanced_RobotFramework/API/variables/my_user_and_passwords.robot
 
 *** Variables ***
 ${GITHUB_HOST}      https://api.github.com
@@ -27,9 +27,9 @@ Confere sucesso na requisição
     ...  msg=Erro na requisição! Verifique: ${RESPONSE}
 
 POST na Issue "12" comentando "Comentário cadastrado via Robot Framework!"
-    ${BODY}         Format String    C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Advanced_RobotFramework/API/data/input/post_comment.json
-    ...             user_git=${MY_GITHUB_USER}
-    Log             Meu Body ficou:\n${BODY}
-    ${RESPONSE}     Post Request    alias=mygithubAuth    uri=${ISSUES_URI}   data=${BODY}
+    ${BODY}         Format String    
+    ...             C:/Users/tggom/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Advanced_RobotFramework/API/data/input/post_comment.json
+    Set Test Variable    ${BODY}
+    ${RESPONSE}     POST On Session    alias=mygithubAuth    url=${ISSUES_URI}   data=${BODY}  expected_status=201
     Confere sucesso na requisição   ${RESPONSE}
 

@@ -10,8 +10,7 @@ Resource            ./variables/my_user_and_passwords.robot
 
 *** Variables ***
 ${GITHUB_HOST}      https://api.github.com
-${ISSUES_URI}       /repos/mayribeirofernandes/myudemyrobotframeworkcourse/issues/12
-# &{RESPONSE}         comments=98
+${ISSUES_URI}       /repos/mayribeirofernandes/myudemyrobotframeworkcourse/issues/
 
 *** Test Cases ***
 Exemplo: Fazendo autenticação básica (Basic Authentication)
@@ -59,8 +58,11 @@ Pesquisar issues com o state "${STATE}" e com o label "${LABEL}"
 
 Enviar a reação "${REACTION}" para a issue "${ISSUE_NUMBER}"
     ${HEADERS}          Create Dictionary    Accept=application/vnd.github.squirrel-girl-preview+json
-    ${MY_REACTION}      Post Request    alias=mygithubAuth    uri=${ISSUES_URI}/${ISSUE_NUMBER}/reactions
-    ...                                 data={"content": "${REACTION}"}     headers=${HEADERS}
+    ${MY_REACTION}      POST On Session    
+    ...    alias=mygithubAuth    
+    ...    url=${ISSUES_URI}/${ISSUE_NUMBER}/reactions
+    ...    data={"content": "${REACTION}"}     
+    ...    headers=${HEADERS}
     Log                 Meus dados: ${MY_REACTION.json()}
     Confere sucesso na requisição   ${MY_REACTION}
 

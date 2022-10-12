@@ -1,5 +1,5 @@
 *** Settings ***
-Library    ./C:/Users/tiago.santos/OneDrive/Documentos/Automação de Testes/RobotFramework/WebTesting/Exercícios_Avançados/Tarefa_2/Libraries/MyKeywords.py
+Library    ../Tarefa_2/Libraries/MyKeywords.py
 Library    MyKeywords
 
 
