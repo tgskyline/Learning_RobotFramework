@@ -1,4 +1,6 @@
 *** Variables ***
-${MY_GITHUB_USER}   Seu USER
-${MY_GITHUB_PASS}   Sua Senha
-${MY_GITHUB_TOKEN}  Seu Token
+${MY_GITHUB_USER}   Usuário
+${MY_GITHUB_PASS}   Senha
+${MY_GITHUB_TOKEN}  Token pelo link abaixo
+
+#Gere o Token pelo link: https://github.com/settings/tokens 

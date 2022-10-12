@@ -1,3 +1,63 @@
+38912900
+
+RG CPF Titulo de Eleitor Carteira de Trabalho, certidão de casamento e comprovante de residência
+
+50
+      Qfunction
+         I'm definingafunction call ....
+         have this function and place .....
+         to do function with the ...
+         to do function for each .....
+         noticeafunction called app .....
+                                                                  CTRL+F
+                                                               02:36
+                                                                03:13
+                                                               03:27
+                                                               04:04
+                                                               06:02
+
+
+Butterfly#03
+
+robot-appium-_jvPT6rI-py3.10 
+
+
+    "python.venvPath":"C:/Users/Tiago Gomes/AppData/Local/pypoetry/Cache/virtualenvs/",
+    "python.poetryPath": "poetry",
+
+  "terminal.integrated.automationProfile.osx": {
+    
+    },
+
+python = "^3.10"
+robotframework = "^5.0.1"
+Appium-Python-Client = "2.1.2"
+robotframework-appiumlibrary = "1.6.0"
+
+
+
+# Configurando o Poetry
+
+### Instação do Poetry
+
+Para instalar o Poetry de forma Global na pasta do Python utilize o comando abaixo
+
+	pip install poetry
+
+Ativando o ambiente virtual
+
+	poetry shell
+
+Exportando as dependências para o Requirements.txt
+
+	poetry export -f requirements.txt --output requirements.txt
+
+	
+	
+------------------------------------------------------------------------------------------------------------------------	
+hemorrhage
+
+
 #ANOTAÇÕES
 
  - Para instalar uma versão especifica do Robot Framework

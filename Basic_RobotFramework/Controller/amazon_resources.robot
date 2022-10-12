@@ -1,7 +1,7 @@
 *** Settings ***
-Library  SeleniumLibrary
-Library  ./Library/chromedriversync.py
-Library  ./Library/screenshot.py
+Library  SeleniumLibrary    timeout=10s
+Library  ../../Library/chromedriversync.py
+Library  ../../Library/screenshot.py
 
 
 *** Variables ***
