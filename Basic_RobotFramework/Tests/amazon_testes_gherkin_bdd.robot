@@ -4,10 +4,6 @@ Resource         ../Controller/amazon_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
-# Para fazer em produção use
-# Suite Setup
-# Suite Teardown
-
 *** Test Cases ***
 
 # MODELO GHERKIN BDD
