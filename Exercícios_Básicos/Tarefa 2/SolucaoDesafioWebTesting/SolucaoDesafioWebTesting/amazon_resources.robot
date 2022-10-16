@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    ../../../../Library/chromedriversync.py
 
 *** Variables ***
 ${BROWSER}                 chrome 
