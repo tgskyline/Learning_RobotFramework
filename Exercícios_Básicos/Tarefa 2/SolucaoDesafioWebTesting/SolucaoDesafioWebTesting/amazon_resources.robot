@@ -16,8 +16,14 @@ ${REMOVIDO_DO_CARRINHO}    //h1[@class='a-spacing-mini a-spacing-top-base'][cont
 
 
 *** Keywords ***
+
+Atualiza o ChromeDrive
+    ${chromedriver_path}=    Get Chromedriver Path
+    Set Global Variable    ${chromedriver_path}
+
 Abrir o navegador
-    Open Browser    browser=${BROWSER}
+    Atualiza o ChromeDrive
+    Open Browser    browser=${BROWSER}    executable_path=${chromedriver_path}
     Maximize Browser Window
 
 Fechar o navegador

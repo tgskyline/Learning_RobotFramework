@@ -6,6 +6,7 @@ Documentation   Resolução da Tarefa 06
 
 *** Test Case ***
 Qual é o número
+    [Tags]    number
     Eu sou o numero
 
 *** Keywords ***
@@ -21,6 +22,9 @@ Eu sou o numero
         END
     END
         
+*** Comments ***
+Teste feito para testar comentários
+
 # *** Test Cases ***
 # Teste de imprimir apenas alguns números
 #   Imprimir somente se for 5 e 10
